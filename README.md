@@ -8,7 +8,7 @@
 ![NLP](https://img.shields.io/badge/NLP-Legal%20Text-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Academic%20Project-lightgrey?style=for-the-badge)
 
-### 🧠 Academic Project – Computational Reasoning  
+### 🔵 Academic Project – Computational Reasoning  
 Universitas Muhammadiyah Malang
 
 </div>
