@@ -1,11 +1,47 @@
 
-# A. Case-Based Reasoning untuk Analisis Putusan Pengadilan
+# ⚖️ Case-Based Reasoning for Court Decision Analysis
 
-Proyek ini merupakan implementasi dari **Tugas UAS Mata Kuliah Penalaran Komputer** Semester Genap 2024/2025 di Fakultas Teknik Informatika UMM. Sistem ini dirancang untuk melakukan **analisis dan prediksi putusan pengadilan** menggunakan pendekatan **Case-Based Reasoning (CBR)**.
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![AI](https://img.shields.io/badge/AI-Case--Based%20Reasoning-orange?style=for-the-badge)
+![NLP](https://img.shields.io/badge/NLP-Legal%20Text-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Academic%20Project-lightgrey?style=for-the-badge)
+
+### 🧠 Academic Project – Computational Reasoning  
+Universitas Muhammadiyah Malang
+
+</div>
 
 ---
 
-## B. Struktur Direktori
+### 🔍 Project Type
+Academic Project | Artificial Intelligence | Case-Based Reasoning | 2025
+
+---
+
+## 📌 Project Overview
+
+Proyek ini mengimplementasikan pendekatan **Case-Based Reasoning (CBR)** untuk menganalisis dan memprediksi putusan pengadilan pada kasus pidana, khususnya **pemalsuan dokumen**.
+
+Sistem bekerja dengan mencari kasus terdahulu yang paling mirip, kemudian menggunakan informasi tersebut untuk memprediksi keputusan pada kasus baru.
+
+---
+
+## ⚙️ System Pipeline
+
+Data Collection → Text Processing → Case Representation → Retrieval → Prediction → Evaluation
+
+### Tahapan:
+1. Scraping & cleaning dokumen putusan  
+2. Representasi kasus dalam bentuk terstruktur  
+3. Retrieval menggunakan TF-IDF / BERT  
+4. Prediksi berdasarkan kemiripan kasus  
+5. Evaluasi performa model  
+
+---
+
+## 📂 Project Structure
 
 ```
 CBR_Putusan_Pemalsuan/
@@ -24,9 +60,49 @@ CBR_Putusan_Pemalsuan/
 ├── requirements.txt          # Library yang dibutuhkan
 ```
 
+
 ---
 
-## C. Instalasi dan Dependensi
+## 🧪 Methodology
+
+### 🔹 Case Representation
+- Ekstraksi metadata kasus  
+- Identifikasi pasal hukum  
+- Ringkasan fakta hukum  
+
+### 🔹 Retrieval
+- TF-IDF similarity  
+- (Opsional) Semantic similarity dengan BERT  
+
+### 🔹 Prediction
+- Menggunakan Top-K kasus paling mirip  
+- Reuse solusi dari kasus terdahulu  
+
+---
+
+## 📊 Dataset
+
+- Sumber: https://putusan3.mahkamahagung.go.id  
+- Domain: **Pidana – Pemalsuan Dokumen**  
+- Format: PDF → Teks → CSV  
+
+---
+
+## 📈 Evaluation
+
+Model dievaluasi menggunakan:
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
+
+## 📁 Hasil evaluasi:
+
+data/eval/prediction_metrics.csv
+
+---
+
+## ▶️ Instalasi dan Dependensi
 
 1. Jalankan di Google Colab **atau** lokal dengan Python ≥ 3.8
 2. Instal library yang dibutuhkan:
@@ -37,7 +113,7 @@ pip install -r requirements.txt
 
 ---
 
-## D. Panduan Menjalankan Pipeline
+## Panduan Menjalankan Pipeline
 
 1. **Tahap 1 – Scraping dan Cleaning**
    - Jalankan `01_scraping.ipynb` untuk mengonversi PDF putusan ke teks dan membersihkannya.
@@ -58,7 +134,7 @@ pip install -r requirements.txt
 
 ---
 
-## E. Dataset
+## Dataset
 
 - Dokumen diperoleh dari: [Direktori Putusan MA RI](https://putusan3.mahkamahagung.go.id)
 - Domain: **Pidana - Pemalsuan Dokumen**
@@ -66,7 +142,7 @@ pip install -r requirements.txt
 
 ---
 
-## F. Contoh File
+## Contoh File
 
 - `queries.json` berisi daftar query kasus baru
 - `ground_truth.csv` berisi label manual untuk evaluasi akurasi prediksi
@@ -74,18 +150,35 @@ pip install -r requirements.txt
 
 ---
 
-## G. Anggota Kelompok
+## 📌 Key Insight
 
-- **Nama: Muhammad Wildan Nabila**
-- **NIM: 202210370311252**
-- **Kelas: Penalaran Komputer A**
-- **Nama: Irawana Juwita** 
-- **NIM: 202210370311446**
-- **Kelas: Penalaran Komputer A**
+- Pendekatan **Case-Based Reasoning** efektif untuk domain hukum berbasis preseden  
+- Similarity antar kasus menjadi faktor utama dalam prediksi  
+- Representasi fitur sangat mempengaruhi performa sistem  
 
 ---
 
-## H. Lisensi
+## 👤 Author & Contributors
+
+| Name | Role |
+|------|------|
+| **Muhammad Wildan Nabila** | Lead Developer |
+| Irawana Juwita | Contributor |
+
+---
+
+## 🎓 Academic Information
+
+| Attribute | Detail |
+|----------|--------|
+| **Course** | Computational Reasoning |
+| **Program** | Informatics |
+| **Institution** | Universitas Muhammadiyah Malang |
+| **Year** | 2024 / 2025 |
+
+---
+
+## Lisensi
 
 Proyek ini ditujukan untuk keperluan akademik dan evaluasi tugas UAS.
 
